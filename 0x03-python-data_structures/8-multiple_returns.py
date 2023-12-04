@@ -4,10 +4,10 @@ def multiple_returns(sentence):
     if sentence == "":
         length = 0
         frist  = None
-        my_typle = (length, frist)
+        my_typle = length, frist
         return (my_typle)
     else:
         length = len(sentence)
         frist = sentence[0]
-        my_typle = (length, frist)
+        my_typle = length, frist
     return (my_typle)
