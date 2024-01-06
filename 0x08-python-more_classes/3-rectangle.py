@@ -21,14 +21,12 @@ class Rectangle:
             raise TypeError("width must be an integer")
         elif value < 0:
             raise ValueError("width must be >= 0")
-        
         self.__width = value
 
     @property
     def height(self):
         """Getter for the height of the rectangle"""
         return self.__height
-    
     @height.setter
     def height(self, value):
         """Setting the value of the height"""
@@ -36,19 +34,19 @@ class Rectangle:
             raise TypeError("height must be an integer")
         elif value < 0:
             raise ValueError("height must be >= 0")
-        
+  
         self.__height = value
 
     def area(self):
         """Return the area of the rectangle"""
         return self.__width * self.__height
-    
+
     def perimeter(self):
         """Return the perimeter of the rectangle"""
         if (self.__height) == 0 or (self.__width) == 0:
             return (0)
         return (self.__width + self.__height) * 2
-    
+
     def __str__(self):
         """Print a repersintation of the rectangle using #"""
         if (self.height) == 0 or (self.width) == 0:
@@ -60,3 +58,6 @@ class Rectangle:
             if i != self.__height - 1:
                 rect.append("\n")
         return ("".join(rect))
+    
+    def __repr__(self):
+        return f"Rectangle({self.__width}, {self.__height})"
